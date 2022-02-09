@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Outfit:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100vw; /* Full width (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  /* z-index: 0; Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.logo {
+  font-size: 50px;
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  text-decoration: underline 1px solid white;
+  font-weight: 700;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.home {
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  padding: 1% 2%;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 20px;
+  color: white;
+  background-color: rgb(207, 0, 0);
+  border-radius: 5px;
+}
+#text {
+  text-align: center;
+  color: white;
+}
+#text h1 {
+  font-size: 70px;
+  margin: 10px 0px 0px 0px;
+}
+#text p {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#slideShow {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/d03a05fb-39a4-4594-b16c-ddc39f35f5bd/IN-en-20220131-popsignuptwoweeks-perspective_alpha_website_small.jpg"); /* The least supported option. */
+}
+
+#movies {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin: 30px auto;
+}
+#movies img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+#searchDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  margin: auto;
+  height: 7vh;
+}
+#search {
+  width: 70%;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+#search:focus {
+  outline: 5px solid rgb(113, 113, 255);
+}
+.btn {
+  margin-left: 10px;
+  width: 30%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  outline: 3px solid rgb(180, 180, 255);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 77, 255);
+  transition: ease-in-out 0.3s;
+}
+.btn:hover {
+  background-color: rgb(28, 28, 190);
+  outline: 3px solid rgb(101, 101, 255);
+}
+#result {
+  position: absolute;
+  width: 40vw;
+  max-height: 300px;
+  /* width: fit-content; */
+  top: 60px;
+  padding: 10px 20px;
+  display: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow-y: auto;
+  background-color: white;
+  cursor: pointer;
+  margin: 0;
+  /* border: 1px solid yellow; */
+}
+#result p:hover {
+  background-color: #f4f4f4;
+}
+
+.card {
+  border: 1px solid#dddddd;
+  background-color: white;
+  border-radius: 10px;
+}
+.card h4,
+.card p {
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#oneProduct {
+  display: none;
+  width: 70vw;
+  margin: auto;
+  justify-content: space-evenly;
+  /* border: 1px solid yellow; */
+}
+#imgDiv {
+  width: 30%;
+  height: 400px;
+  /* border-right: 2px solid #f3f3f3; */
+  padding-right: 7%;
+}
+#infoDive p{
+      text-align: justify;
+}
+#imgDiv img {
+  height: 100%;
+  border-radius: 10px;
+}
+#infoDiv {
+  /* padding: 2%; */
+  max-width: 40%;
+  font-size: 20px;
+  color: white;
+}
+#title {
+  font-size: 3rem;
+}
+
+.recom {
+  width: 80%;
+  margin: 5px auto;
+  background-color: green;
+  color: #f3f3f3;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 855px) {
+  #movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #searchDiv {
+    width: 90vw;
+  }
+  .container {
+    width: 95%;
+    margin: auto;
+  }
+  #text h1 {
+    font-size: 50px;
+    margin: 10px 0px 0px 0px;
+  }
+  #oneProduct {
+    width: 80vw;
+  }
+  #imgDiv {
+    min-width: 50vw;
+  }
+    #infoDiv {
+    max-width: 70vw;
+    padding:0px
+  }
+}
+@media only screen and (max-width: 450px) {
+  #movies {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  #searchDiv {
+    width: 90vw;
+  }
+  .logo {
+    font-size: 30px;
+  }
+  #text h1 {
+    font-size: 40px;
+    margin: 10px 0px 0px 0px;
+  }
+  #movies img {
+    height: 400px;
+  }
+  #oneProduct {
+    width: 80vw;
+    flex-direction: column;
+  }
+  #imgDiv {
+    width: 70vw;
+  }
+  #infoDiv {
+    max-width: 80vw;
+    padding:0px
+  }
+
+
+}

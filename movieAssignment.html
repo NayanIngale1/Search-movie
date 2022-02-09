@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Movies</title>
+    <link rel="stylesheet" href="movieAssignment.css" />
+  </head>
+  <body>
+    <!-- <div id="overlay"></div> -->
+    <div id="slideShow">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="container">
+          <a class="logo" href="#">Movie House</a>
+        </div>
+        <div onclick="location.reload()" class="home">HOME</div>
+      </nav>
+      <div class="container">
+        <div id="text">
+          <h1>Unlimited movies, TV shows and more.</h1>
+          <p>Find Out Ratings and Release date here.</p>
+        </div>
+        <form autocomplete="off" id="searchDiv">
+          <input
+            autocomplete="false"
+            name="hidden"
+            type="text"
+            style="display: none"
+          />
+          <input type="search" oninput="debounce(main,500)" id="search" placeholder="Search movie ..." />
+          <button class="btn" type="submit" onclick="displayAll()">Search</button>
+          <div id="result"></div>
+        </form>
+      </div>
+      <div class="container" id="movies">
+        
+      </div>
+      <!-- <img src="https://sstarnation.files.wordpress.com/2019/12/tanaji_gcue.jpg" alt=""> -->
+    </div>
+    <!-- Page Content --> 
+  </body>
+</html>
+<script src="movieAssignment.js"></script>
+
+<!-- https://api.themoviedb.org/3/movie/550?api_key=67e38141a3936f890d898c1bb924d4f6 -->
+
+<!-- https://api.themoviedb.org/3/trending/all/day?api_key=67e38141a3936f890d898c1bb924d4f6 -->
+
+
+<!-- https://api.themoviedb.org/3/search/company?api_key=67e38141a3936f890d898c1bb924d4f6&query=movie&page=2 -->
+
+
+<!-- https://api.themoviedb.org/3/search/movie?api_key=67e38141a3936f890d898c1bb924d4f6&language=en-US&query=avengers&page=2 -->
