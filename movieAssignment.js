@@ -91,7 +91,7 @@ function showAll(array) {
     });
 
     let img = document.createElement("img");
-    if (el.poster_path === "N/A") {
+    if (el.poster_path === null) {
       img.src = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADPzrYm_hQg2XMNc_9KTr9Axmn35s0DbsIQ&usqp=CAU`;
     } else {
       img.src = `https://image.tmdb.org/t/p/original${el.poster_path}`;
@@ -135,7 +135,7 @@ function showMovie(el) {
   imgDiv.id = "imgDiv";
   let img = document.createElement("img");
 
-  if (el.poster_path === "N/A") {
+  if (el.poster_path === null) {
     img.src = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADPzrYm_hQg2XMNc_9KTr9Axmn35s0DbsIQ&usqp=CAU`;
   } else {
     img.src = `https://image.tmdb.org/t/p/original${el.poster_path}`;
