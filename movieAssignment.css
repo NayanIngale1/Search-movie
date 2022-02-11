@@ -135,11 +135,16 @@ body {
   border: 1px solid#dddddd;
   background-color: white;
   border-radius: 10px;
+  /* height: fit-content; */
 }
-.card h4,
-.card p {
+.card h4 {
   padding: 5px 20px;
   font-size: 1.5rem;
+  margin: 0;
+}
+.card p {
+  padding: 5px 20px;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -156,8 +161,8 @@ body {
   /* border-right: 2px solid #f3f3f3; */
   padding-right: 7%;
 }
-#infoDive p{
-      text-align: justify;
+#infoDive p {
+  text-align: justify;
 }
 #imgDiv img {
   height: 100%;
@@ -204,9 +209,9 @@ body {
   #imgDiv {
     min-width: 50vw;
   }
-    #infoDiv {
+  #infoDiv {
     max-width: 70vw;
-    padding:0px
+    padding: 0px;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -239,8 +244,6 @@ body {
   }
   #infoDiv {
     max-width: 80vw;
-    padding:0px
+    padding: 0px;
   }
-
-
 }
